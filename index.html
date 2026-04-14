@@ -5,67 +5,69 @@
 	<meta charset="UTF-8">
 	<title>Kanban Style Task Manager</title>
 </head>
+
 <body>
 	<header>
 		<h1>Task Manager (Kanban Style)</h1>
-	<div class="counter">0 task(s)</div>
-	<label for="filterpriority">Filter by priority level: </label>
-	<select name="filterpriority" id="filterpriority">
-		<option value="p1">Critical/Immediate</option>
-  		<option value="p2">High</option>
-  		<option value="p3">Medium</option>
-  		<option value="p4">Low</option>
-  	</select>
+		<div class="counter">0 task(s)</div>
+		<label for="filterpriority">Filter by priority level: </label>
+		<select name="filterpriority" id="filterpriority">
+			<option value="p1">Critical/Immediate</option>
+			<option value="p2">High</option>
+			<option value="p3">Medium</option>
+			<option value="p4">Low</option>
+		</select>
 	</header>
-	
+
 	<main>
-	  	<section id="todo">
-	  		<h2>To-do</h2>
-	  		<ul></ul>
-	  		<button id="addTask"> + Add </button>
-	  	</section>
+		<section id="todo">
+			<h2>To-do</h2>
+			<ul></ul>
+			<button id="addTask"> + Add </button>
+		</section>
 
-	  	<section id="inprogress">
-	  		<h2>In progress</h2>
-	  		<ul></ul>
-	  		<button id="addTask"> + Add </button>
-	  	</section>
+		<section id="inprogress">
+			<h2>In progress</h2>
+			<ul></ul>
+			<button id="addTask"> + Add </button>
+		</section>
 
-	  	<section id="done">
-	  		<h2>Done</h2>
-	  		<ul></ul>
-	  		<button id="addTask"> + Add </button>
-	  	</section>
-  	</main>
+		<section id="done">
+			<h2>Done</h2>
+			<ul></ul>
+			<button id="addTask"> + Add </button>
+		</section>
+	</main>
 
-  	<div id="taskmodal" class="tasks">
-  		<div class="form">
-  			<label for="taskTitle">Add new task</label>
-  			<input type="text" id="taskTitle" placeholder="Tasks name">
-  		</div>
+	<div id="taskmodal" class="tasks">
+		<div class="form">
+			<label for="taskTitle">Add new task</label>
+			<input type="text" id="taskTitle" placeholder="Tasks name">
+		</div>
 
-  		<div class="form">
-  			<label for="description">Description</label>
-  			<textarea id="description" rows="2" placeholder="describe the task"></textarea>
-  		</div>
+		<div class="form">
+			<label for="description">Description</label>
+			<textarea id="description" rows="2" placeholder="describe the task"></textarea>
+		</div>
 
-  		<div class="form">
-	  		<label for="levelpriority">Priority Level:</label>
-	  		<select name="levelpriority" id="levelpriority">
+		<div class="form">
+			<label for="levelpriority">Priority Level:</label>
+			<select name="levelpriority" id="levelpriority">
 				<option value="p1">Critical/Immediate</option>
-		  		<option value="p2">High</option>
-		  		<option value="p3">Medium</option>
-		  		<option value="p4">Low</option>
-	  		</select>
-	  	</div>
+				<option value="p2">High</option>
+				<option value="p3">Medium</option>
+				<option value="p4">Low</option>
+			</select>
+		</div>
 
-  		<div class="form">
-  			<label for="duedate">Due Date</label>
-  			<input type="date" id="duedate">
-  		</div>
+		<div class="form">
+			<label for="duedate">Due Date</label>
+			<input type="date" id="duedate">
+		</div>
 
-  		<button id="save">Save</button>
-  		<button id="cancel">Cancel</button>
-  	</div>
+		<button id="save">Save</button>
+		<button id="cancel">Cancel</button>
+	</div>
 </body>
+
 </html>
