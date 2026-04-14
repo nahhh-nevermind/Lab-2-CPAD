@@ -30,7 +30,7 @@ function createTaskCard(taskObj) {
 	control.classList.add("control");
 
 	const editBtn = document.createElement("button");
-	editBtn.textContent = "edit";
+	editBtn.textContent = "Edit";
 	editBtn.setAttribute("data-action", "edit");
 	editBtn.setAttribute("data-id", taskObj.id);
 
