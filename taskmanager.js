@@ -94,3 +94,19 @@ function updateTask(taskId, updatedData) {
 	priolabel.classList.add(updatedData.priority);
 	priolabel.textContent = updatedData.priority.toUpperCase();
 }
+
+todoList.addEventListener('click', function(event){
+	const action = event.target.getAttribute('data-action');
+	const idStr = event.target.getAttribute('data-id');
+	if(!action||!idStr) return;
+
+	const taskId = parseInt(idStr, 10);
+
+	if(action === 'delete'){
+		deleteTask(taskId);
+	}
+
+	if(action === 'edit'){
+		editTask(taskId);
+	}
+});

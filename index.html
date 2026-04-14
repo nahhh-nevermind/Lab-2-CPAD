@@ -2,8 +2,10 @@
 <html lang="en">
 
 <head>
+	<link rel="stylesheet" href="style.css">
 	<meta charset="UTF-8">
 	<title>Kanban Style Task Manager</title>
+	<script src="taskmanager.js" defer></script>
 </head>
 
 <body>
@@ -20,23 +22,25 @@
 	</header>
 
 	<main>
-		<section id="todo">
-			<h2>To-do</h2>
-			<ul></ul>
-			<button id="addTask"> + Add </button>
-		</section>
-
-		<section id="inprogress">
-			<h2>In progress</h2>
-			<ul></ul>
-			<button id="addTask"> + Add </button>
-		</section>
-
-		<section id="done">
-			<h2>Done</h2>
-			<ul></ul>
-			<button id="addTask"> + Add </button>
-		</section>
+		<div class=layout>
+			<section id="todo">
+				<h2>To-do</h2>
+				<ul></ul>
+				<button id="addTask"> + Add </button>
+			</section>
+		
+			<section id="inprogress">
+				<h2>In progress</h2>
+				<ul></ul>
+				<button id="addTask"> + Add </button>
+			</section>
+		
+			<section id="done">
+				<h2>Done</h2>
+				<ul></ul>
+				<button id="addTask"> + Add </button>
+			</section>
+		</div>
 	</main>
 
 	<div id="taskmodal" class="tasks">
