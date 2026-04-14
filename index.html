@@ -14,6 +14,7 @@
 		<div class="counter">0 task(s)</div>
 		<label for="filterpriority">Filter by priority level: </label>
 		<select name="filterpriority" id="filterpriority">
+			<option value="all">Show All</option>
 			<option value="p1">Critical/Immediate</option>
 			<option value="p2">High</option>
 			<option value="p3">Medium</option>
@@ -26,19 +27,20 @@
 			<section id="todo">
 				<h2>To-do</h2>
 				<ul></ul>
-				<button id="addTask"> + Add </button>
+				<button class="addTask"> + Add </button>
 			</section>
-		
+
 			<section id="inprogress">
 				<h2>In progress</h2>
 				<ul></ul>
-				<button id="addTask"> + Add </button>
+				<button class="addTask"> + Add </button>
 			</section>
-		
+
 			<section id="done">
 				<h2>Done</h2>
 				<ul></ul>
-				<button id="addTask"> + Add </button>
+				<button class="addTask"> + Add </button>
+				<button id="clearDone">Clear All</button>
 			</section>
 		</div>
 	</main>

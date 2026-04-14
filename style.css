@@ -36,7 +36,7 @@ main{
 
 .layout{
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1.8rem;
     padding: 0.6rem 1.2rem;
 }
@@ -63,4 +63,30 @@ button:hover{
 
 button:active{
     background-color: #8f6c52;
+}
+
+#taskmodal {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.task-card {
+    background: var(--headercolour);
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    list-style: none;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.is-hidden{
+    display: none;
 }
