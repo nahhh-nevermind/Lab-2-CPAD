@@ -19,16 +19,9 @@ function createTaskCard(taskObj) {
 	const desc = document.createElement("p");
 	desc.textContent = taskObj.description;
 
-	const prioritylabelling = {
-		p1: "Critical",
-		p2: "High",
-		p3: "Medium",
-		p4: "Low"
-	}
-
 	const priolabel = document.createElement("span");
 	priolabel.classList.add("priolabel", taskObj.priority);
-	priolabel.textContent = prioritylabelling[taskObj.priority];
+	priolabel.textContent = taskObj.priority.toUpperCase();
 
 	const date = document.createElement("small");
 	date.textContent = `Due:${taskObj.dueDate}`;
@@ -105,14 +98,7 @@ function updateTask(taskId, updatedData) {
 
 	const prio = card.querySelector(".priolabel");
 	prio.className = `priolabel ${updatedData.priority}`;
-	const prioritylabelling = {
-		p1: "Critical",
-		p2: "High",
-		p3: "Medium",
-		p4: "Low"
-	}
-
-	prio.textContent = priorityMap[updatedData.priority];
+	prio.textContent = updatedData.priority.toUpperCase();
 }
 
 function updateTaskCounter() {
