@@ -3,6 +3,13 @@ const addBtn = document.querySelectorAll(".addTask");
 const cancelBtn = document.getElementById("cancel");
 const saveBtn = document.getElementById("save");
 const filterPrio = document.getElementById("filterpriority");
+const prioritylabelling = {
+		p1: "Critical",
+		p2: "High",
+		p3: "Medium",
+		p4: "Low"
+	}
+
 let tasks = [];
 let nextId = 1;
 let currentColumn = "";
@@ -21,7 +28,7 @@ function createTaskCard(taskObj) {
 
 	const priolabel = document.createElement("span");
 	priolabel.classList.add("priolabel", taskObj.priority);
-	priolabel.textContent = taskObj.priority.toUpperCase();
+	priolabel.textContent = prioritylabelling[taskObj.priority];
 
 	const date = document.createElement("small");
 	date.textContent = `Due:${taskObj.dueDate}`;
@@ -98,7 +105,8 @@ function updateTask(taskId, updatedData) {
 
 	const prio = card.querySelector(".priolabel");
 	prio.className = `priolabel ${updatedData.priority}`;
-	prio.textContent = updatedData.priority.toUpperCase();
+
+	prio.textContent = prioritylabelling[updatedData.priority];
 }
 
 function updateTaskCounter() {
